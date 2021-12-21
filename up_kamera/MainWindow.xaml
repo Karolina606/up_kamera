@@ -1,0 +1,45 @@
+﻿<Window x:Name="window" x:Class="up_kamera.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="535.79" Width="888.466" Closing="windowClosing">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="781*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="cbCamera" HorizontalAlignment="Left" Margin="666.714,48,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Label Content="Wybierz kamerę:" HorizontalAlignment="Left" Margin="666.714,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.578,0.88" Height="25" Grid.Column="1"/>
+        <Button x:Name="btnChooseCam" Content="Wybierz" HorizontalAlignment="Left" Margin="666.714,75,0,0" VerticalAlignment="Top" Width="120" Loaded="onLoaded" Background="#FF7781FF" Click="btnChooseCamClick" Grid.Column="1"/>
+        <Button x:Name="btnCapturePhoto" Content="Zrób zdjęcie" HorizontalAlignment="Left" Margin="666.714,120,0,0" VerticalAlignment="Top" Width="120" Click="btnCapturePhotoClick" Grid.Column="1"/>
+        <WindowsFormsHost HorizontalAlignment="Left" Height="438" Margin="9.714,12,0,0" VerticalAlignment="Top" Width="621" Grid.Column="1">
+            <wf:PictureBox x:Name="pictBox" Width="440" Height="330" />
+        </WindowsFormsHost>
+        <Label Content="Zoom:" Grid.Column="1" HorizontalAlignment="Left" Margin="666.714,167,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,1.142"/>
+        <Label Content="Ekspozycja:" Grid.Column="1" HorizontalAlignment="Left" Margin="666.714,210,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbZoom"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="757.714,171,0,0" TextWrapping="Wrap" Text="Zoom" VerticalAlignment="Top" Width="81"/>
+        <TextBox x:Name="tbExposure" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="757.714,210,0,0" TextWrapping="Wrap" Text="Exposure" VerticalAlignment="Top" Width="81"/>
+
+        <Label Content="Panorama:" Grid.Column="1" HorizontalAlignment="Left" Margin="666.714,249,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,1.142"/>
+        <TextBox x:Name="tbPan"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="757.714,253,0,0" TextWrapping="Wrap" Text="Pan" VerticalAlignment="Top" Width="81"/>
+
+        <Label Content="Pochylenie:" Grid.Column="1" HorizontalAlignment="Left" Margin="666.714,289,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,1.142"/>
+        <TextBox x:Name="tbTilt"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="757.714,293,0,0" TextWrapping="Wrap" Text="Tilt" VerticalAlignment="Top" Width="81"/>
+
+        <Label Content="Obr:" Grid.Column="1" HorizontalAlignment="Left" Margin="666.714,328,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,1.142"/>
+        <TextBox x:Name="tbRoll"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="757.714,332,0,0" TextWrapping="Wrap" Text="Roll" VerticalAlignment="Top" Width="81"/>
+
+        <Label Content="Tęczówka:" Grid.Column="1" HorizontalAlignment="Left" Margin="666.714,368,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,1.142"/>
+        <TextBox x:Name="tbIris"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="757.714,371,0,0" TextWrapping="Wrap" Text="Iris" VerticalAlignment="Top" Width="81"/>
+        
+        <Label Content="Ostrość:" Grid.Column="1" HorizontalAlignment="Left" Margin="666.714,410,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,1.142"/>
+        <TextBox x:Name="tbFocus"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="757.714,414,0,0" TextWrapping="Wrap" Text="Focus" VerticalAlignment="Top" Width="81"/>
+        
+        <Button x:Name="btnSetup" Content="Zmień ustawienia" Grid.Column="1" HorizontalAlignment="Left" Margin="666.714,453,0,0" VerticalAlignment="Top" Width="172" Click="btnSetupClick"/>
+        <Button x:Name="btnStartRecording" Content="Nagraj" Grid.Column="1" HorizontalAlignment="Left" Margin="9.714,458,0,0" VerticalAlignment="Top" Width="75" Click="btnStartRecordingClick"/>
+        <Button x:Name="btnStopRecording"  Content="Stop" Grid.Column="1" HorizontalAlignment="Left" Margin="109.714,458,0,0" VerticalAlignment="Top" Width="75" Click="btnStopRecordingClick"/>
+    </Grid>
+</Window>
